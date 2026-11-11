@@ -1,0 +1,14 @@
+Overview of the python-nmap Module
+The python-nmap library is a python wrapper that helps interact with the Nmap port scanner programmatically and parses scan results into Python dictionaries.
+
+Core Class: nmap.PortScanner() instantiates the scanner object.
+
+Key Methods:
+
+scan(hosts, ports, arguments): Executes an Nmap scan against specified targets, ports, and CLI arguments (e.g., -sV, -O).
+
+all_hosts(): Returns a list of all hosts discovered or scanned.
+
+scanstats(): Provides summary statistics of the scan (e.g., total hosts up, elapsed time).
+
+Data Structure: Results are returned as nested dictionaries. For instance, scanner[host]['tcp'][port]['state'] retrieves whether a specific port is open or closed, allowing easy automation and scripting.
